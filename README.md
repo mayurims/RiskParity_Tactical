@@ -115,7 +115,7 @@ Place raw data files in `data/raw/`. Required sources:
 ### 3. Run the backtest
 
 ```bash
-python -m src.utils.data_loader        # Build processed panel
+python -m src.utils.data_loader        
 python -m src.utils.backtest           # Run OOS backtest (Jul 1995 – Dec 2024)
 ```
 
