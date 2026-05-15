@@ -75,34 +75,16 @@ All z-scores use expanding windows (no lookahead). The **regime score** $s_t = \
 
 ```
 risk-parity-tactical/
-├── data/
-│   ├── raw/              # Raw downloaded data (gitignored)
-│   └── processed/        # Cleaned, aligned monthly panel (gitignored)
+├── data/                 # Raw downloaded data (gitignored)
 │
 ├── src/
-│   ├── base_portfolio/
-│   │   ├── erc.py        # ERC weight solver (log-barrier dual)
-│   │   └── covariance.py # Regime-conditional EWMA + LW shrinkage
-│   │
-│   ├── regime/
-│   │   └── fci.py        # FCI construction and regime score
-│   │
-│   ├── overlay/
-│   │   ├── forecasts.py  # Regime-conditional combination forecasts
-│   │   └── tilt.py       # Shrinkage → gate → sign-cap tilt
-│   │
-│   └── utils/
-│       ├── data_loader.py # Load & align all data sources
-│       ├── backtest.py    # Monthly backtest engine with TC
-│       └── metrics.py     # Sharpe, Calmar, alpha, OOS R², DA
-│
-├── notebooks/            # Exploratory analysis and figures
+│   ├── project.py
+|
 ├── results/
 │   ├── figures/          # All paper figures (gitignored, regenerated)
 │   └── tables/           # All paper tables (gitignored, regenerated)
 │
-├── tests/                # Unit tests
-├── docs/                 # Additional documentation
+├── docs/                 # Project Writeup
 ├── requirements.txt
 └── README.md
 ```
